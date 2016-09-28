@@ -1,0 +1,59 @@
+.navbar {
+  background-color: grey;
+  color: white;
+  display: block;
+  border-radius: 0;
+  text-align: center;
+  margin-bottom: 0;
+}
+.topGames {
+  text-align: center;
+}
+
+#topGamesTitle {
+  font-size: 20px;
+}
+.fa-arrow-circle-down {
+  padding-left: 15px;
+  margin-top: 10px;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+}
+
+.iconRotate{
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.menuContainer {
+  background-color: teal;
+  height: 0px;
+  float: left;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.3s
+}
+
+.menuOpen{
+  height: 100vh;
+}
+
+.streamTitle {
+  text-align: center;
+}
+
+.mainContainer {
+  transition: margin-left 0.3s;
+  padding: 20px;
+  text-align: center;
+  background-color: purple;
+  clear: left;
+}
+
+.mainOpen {
+  margin-left: 300px;
+}
