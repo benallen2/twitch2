@@ -5,6 +5,7 @@
   border-radius: 0;
   text-align: center;
   margin-bottom: 0;
+  position: static;;
 }
 .topGames {
   text-align: center;
@@ -51,9 +52,16 @@
   padding: 20px;
   text-align: center;
   background-color: purple;
+  color: white;
   clear: left;
+
 }
 
 .mainOpen {
   margin-left: 300px;
+}
+
+.streamersList1 > li, .streamersList2 > li {
+  list-style: none;
+  display: inline-block;
 }

@@ -11,17 +11,17 @@
   <script src="twitch2.js" type="text/javascript" rel="stylesheet"></script>
   <title>Twitch Viewer</title>
 </head>
-<body>
-  <nav class="navbar navbar-default">
-    <div class="row">
-      <div class="col-md-3 col-xs-6 topGames">
-        <h4 id="topGamesTitle">Top 10 Games <i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></h4>
-      </div>
-      <div class="col-md-4 col-md-offset-1 col-xs-6">
-        <h1 id="navbarTitle">Top 10 Twitch Viewer</h1>
-      </div>
+<nav class="navbar navbar-default">
+  <div class="row">
+    <div class="col-md-3 col-xs-6 topGames">
+      <h4 id="topGamesTitle">Top 10 Games <i class="fa fa-arrow-circle-down fa-2x" aria-hidden="true"></i></h4>
     </div>
-  </nav>
+    <div class="col-md-4 col-md-offset-1 col-xs-6">
+      <h1 id="navbarTitle">Top 10 Twitch Viewer</h1>
+    </div>
+  </div>
+</nav>
+<body>
   <div class="container-fluid col-xs-6 col-md-3 menuContainer">
       <ul class="gamesMenu">
       </ul>
@@ -29,27 +29,25 @@
   <div class="container-fluid mainContainer col-xs-12" id="main">
     <div class="row">
       <div class="stream">
-        <h3>Current Stream: </h3>
+        <h3>Current Stream: <span id="currentName"></span></h3>
       </div>
     </div>
     <div class="row">
       <div class="streamVid">
-        <script src= "http://player.twitch.tv/js/embed/v1.js"></script>
-<div id="streamVideo"></div>
-<script type="text/javascript">
-    var options = {
-        width: 854,
-        height: 480,
-        channel: "Twitch",
-        //video: "{VIDEO_ID}"
-    };
-    var player = new Twitch.Player("streamVideo", options);
-    player.setVolume(0.5);
-    player.addEventListener(Twitch.Player.PAUSE, () => { console.log('Player is paused!'); });
-</script>
-</div>
-</div>
-  </div>
+      <script src= "http://player.twitch.tv/js/embed/v1.js"></script>
+        <div id="streamVideo">
+        </div>
+      </div>
+    </div>
+    <div class="row channels1">
+      <ul class="streamersList1">
+      </ul>
+    </div>
+    <div class="row channels2">
+      <ul class="streamersList2">
+      </ul>
+    </div>
+ </div>   <!--Main content Container -->
 
 </body>
 </html>
