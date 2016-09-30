@@ -1,11 +1,13 @@
+body {
+  overflow-x: hidden;
+}
 .navbar {
-  background-color: grey;
-  color: white;
+  background-color: #465066;
+  color: #BFBFBF;
   display: block;
   border-radius: 0;
   text-align: center;
-  margin-bottom: 0;
-  position: static;;
+  height: 10vh;
 }
 .topGames {
   text-align: center;
@@ -29,7 +31,8 @@
 }
 
 .menuContainer {
-  background-color: teal;
+  background-color: #5A6273;
+  color: #BFBFBF;
   height: 0px;
   float: left;
   width: 300px;
@@ -40,7 +43,8 @@
 }
 
 .menuOpen{
-  height: 100vh;
+  margin-top: 10vh;
+  height: 90vh;
 }
 
 .streamTitle {
@@ -51,17 +55,67 @@
   transition: margin-left 0.3s;
   padding: 20px;
   text-align: center;
-  background-color: purple;
-  color: white;
-  clear: left;
+  background-color: #71757F;
+  color: #BFBFBF;
+  height: 100vh;
+  overflow-y: scroll;
+}
 
+.mainContainer::-webkit-scrollbar {
+	width: 6px;
+	background-color: #BFBFBF;
+}
+.mainContainer::-webkit-scrollbar-thumb {
+	background-color: #465066;
+}
+
+#streamVideo {
+  padding: 10px;
+  margin: 20px;
 }
 
 .mainOpen {
   margin-left: 300px;
 }
 
-.streamersList1 > li, .streamersList2 > li {
+.streamersList1 > li {
   list-style: none;
   display: inline-block;
+  padding: 20px;
+  border: 1px solid #BFBFBF;
+  margin-right: 10px;
+  cursor: pointer;
+  height: 180px;
+  width: 160px;
+  background-color: #5A6273;
+}
+
+.streamersList2 > li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #BFBFBF;
+  margin-right: 10px;
+  cursor: pointer;
+  height: 180px;
+  width: 160px;
+  background-color: #5A6273;
+}
+
+.gamesMenu {
+  list-style: none;
+  padding-top: 10px;
+}
+
+.menuContainer::-webkit-scrollbar {
+	width: 6px;
+	background-color: #BFBFBF;
+}
+.menuContainer::-webkit-scrollbar-thumb {
+	background-color: #465066;
+}
+
+.gamesMenu > li {
+  padding-top: 10px;
+  border-bottom: 1px solid #BFBFBF;
 }

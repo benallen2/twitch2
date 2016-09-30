@@ -10,6 +10,8 @@ function menuDrop () {
     $(".fa-arrow-circle-down").toggleClass("iconRotate");
     $(".menuContainer").toggleClass("menuOpen");
     $(".mainContainer").toggleClass("mainOpen");
+    $("#main").toggleClass("col-xs-10");
+    $("#main").toggleClass("col-xs-12");
   });
 }
 
@@ -61,20 +63,25 @@ function getStreams(){
       "Client-ID": "g0yy7wimbymfcnmott7o2dgatvwnbwn"
     },
     success: function (data) {
+      $(".streamersList1").empty();
+      $(".streamersList2").empty();
       for (var k = 0; k < data.streams.length; k++){
         streamersArr.push(data.streams[k].channel.name);
       }
-      console.log(streamersArr);
+      console.log(data);
       for(var i = 0; i < 5; i++){
-        $(".streamersList1").append("<li class='streamer' streamer='" + i + "'><img src='" + data.streams[i].preview.small + "'></br>" + data.streams[i].channel.display_name + "</br>Viewers: " + data.streams[i].viewers);
+        $(".streamersList1").append("<li class='streamer' streamer='" + i + "'><img src='" + data.streams[i].preview.small + "'></br>" + data.streams[i].channel.display_name + "</br> Playing: " + data.streams[i].game + "</br>Viewers: " + data.streams[i].viewers);
       }
       for(var j = 5; j < 10; j++){
-        $(".streamersList2").append("<li class='streamer' streamer='" + j + "'><img src='" + data.streams[j].preview.small + "'></br>" + data.streams[j].channel.display_name + "</br>Viewers: " + data.streams[j].viewers);
+        $(".streamersList2").append("<li class='streamer' streamer='" + j + "'><img src='" + data.streams[j].preview.small + "'></br>" + data.streams[j].channel.display_name + "</br> Playing: " + data.streams[j].game +  "</br>Viewers: " + data.streams[j].viewers);
       }
       streamSelect();
     }
   });
 }
+
+
+
 
 function player() {
   var options = {
