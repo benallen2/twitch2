@@ -38,6 +38,7 @@ function gameSelect () {
   $(".listGame").click(function() {
     listClick = $(this).attr("id");
     game = gameArr[Number(listClick)];
+    streamersArr = [];
     getStreams();
   });
 }
@@ -68,7 +69,7 @@ function getStreams(){
       for (var k = 0; k < data.streams.length; k++){
         streamersArr.push(data.streams[k].channel.name);
       }
-      console.log(data);
+      console.log(streamersArr);
       for(var i = 0; i < 5; i++){
         $(".streamersList1").append("<li class='streamer' streamer='" + i + "'><img src='" + data.streams[i].preview.small + "'></br>" + data.streams[i].channel.display_name + "</br> Playing: " + data.streams[i].game + "</br>Viewers: " + data.streams[i].viewers);
       }
